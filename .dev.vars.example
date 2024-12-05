@@ -1,0 +1,2 @@
+BOT_TOKEN = "get_this_from_bot_father https://core.telegram.org/bots/tutorial"
+CLAUDE_TOKEN = "get_this_from_https://console.anthropic.com/"
