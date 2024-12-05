@@ -6,6 +6,8 @@ If you have trouble getting this to work, reach out to me on Twitter (@joodaloop
 
 Over time, I hope to add more examples of Telegram bot features, as well as integrations with other Cloudflare products (R2, Vectorize, etc.).
 
+I should also write a blog post of some kind explaining how to work with this project locally, but you should probably read the docs until then.
+
 
 
 ## things you need
@@ -18,18 +20,18 @@ Over time, I hope to add more examples of Telegram bot features, as well as inte
 
 3. A Cloudflare account (to host the bot)
 	- Clone this repo
-	- Go to the Clouldflare dashboard => Workers & Pages => Create => Workers => Create the "Hello World" worker
+	- Go to the Clouldflare dashboard => Workers & Pages => Create => Workers => Create the "Hello World" worker => Name it "telegram-chatbot"
 	- Go to the Settings for the Worker => Build => Connect your Github repository
 	- Then set your API keys: Settings => Variables & Secrets => Add secrets (type: secret) for the following tokens:
 		- BOT_TOKEN = your_telegram_bot_token
 		- CLAUDE_TOKEN = your_claude_token
 
 4. A terminal of some kind
-	- To connect the bot to the worker, you'll need to run the following commend from any command line:
+	- To connect the bot to the worker, you'll need to run the following command from any command line:
 	```bash
-	curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook" -H "Content-Type: application/json" -d '{"url":"<YOUR_WORKER_URL>/telegram","allowed_updates":["message","callback_query"]}'```
-
-
+	curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook" -H "Content-Type: application/json" -d '{"url":"<YOUR_WORKER_URL>/telegram","allowed_updates":["message","callback_query"]}'
+	```
+	- **Note:** You have to replace <YOUR_BOT_TOKEN> and <YOUR_WORKER_URL> with thier actual values. If this step is successful, the commend will return `{"ok":true,"result":true,"description":"Webhook was set"}`
 
 
 ## Addtional details
