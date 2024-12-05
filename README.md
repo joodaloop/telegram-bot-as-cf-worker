@@ -4,6 +4,8 @@ Minimal starter code to create a Telegram bot to talk to Claude.
 
 If you have trouble getting this to work, reach out to me on Twitter (@joodalooped) or Bluesky (@joodaloop.bsky.social) or open an issue.
 
+Over time, I hope to add more examples of Telegram bot features, as well as integrations with other Cloudflare products (R2, Vectorize, etc.).
+
 
 
 ## things you need
