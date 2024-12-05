@@ -24,6 +24,12 @@ Over time, I hope to add more examples of Telegram bot features, as well as inte
 		- BOT_TOKEN = your_telegram_bot_token
 		- CLAUDE_TOKEN = your_claude_token
 
+4. A terminal of some kind
+	- To connect the bot to the worker, you'll need to run the following commend from any command line:
+	```bash
+	curl -X POST "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook" -H "Content-Type: application/json" -d '{"url":"<YOUR_WORKER_URL>/telegram","allowed_updates":["message","callback_query"]}'```
+
+
 
 
 ## Addtional details
